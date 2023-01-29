@@ -1,4 +1,4 @@
-import ReactFlow, { addEdge, Background, Connection, ConnectionMode, Controls, useEdgesState, useNodesState } from "reactflow";
+import ReactFlow, { addEdge, Background, Connection, ConnectionMode, Controls, Node, useEdgesState, useNodesState } from "reactflow";
 import * as Toolbar from '@radix-ui/react-toolbar';
 import { zinc } from 'tailwindcss/colors'
 import 'reactflow/dist/style.css';
@@ -20,21 +20,20 @@ const INITIAL_NODES = [
     id: crypto.randomUUID(),
     type: 'square',
     position: {
-      x: 200,
-      y: 200,
+      x: 750,
+      y: 350,
     },
     data: {},
   },
-
   {
     id: crypto.randomUUID(),
     type: 'square',
     position: {
-      x: 600,
-      y: 200,
+      x: 750,
+      y: 350,
     },
     data: {},
-  }
+  },
 ] satisfies Node[]
 
 function App() {
